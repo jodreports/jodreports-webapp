@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.lightful.businessdocs</groupId>
+    <artifactId>library-parent</artifactId>
+    <version>0.5.5-SNAPSHOT</version>
+  </parent>
+
   <groupId>net.sf.jodreports</groupId>
   <artifactId>jodreports-webapp</artifactId>
   <version>2.4.1-SNAPSHOT</version>
@@ -31,8 +38,8 @@
       <version>1.6.1</version>
     </dependency>
     <dependency>
-	  <groupId>com.artofsolving</groupId>
-  	  <artifactId>jodconverter</artifactId>
+      <groupId>com.artofsolving</groupId>
+      <artifactId>jodconverter</artifactId>
       <version>2.2.1</version>
     </dependency>
     <dependency>
