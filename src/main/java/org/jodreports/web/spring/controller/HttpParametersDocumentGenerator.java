@@ -13,18 +13,16 @@
 // Lesser General Public License for more details.
 // http://www.gnu.org/copyleft/lesser.html
 //
-package net.sf.jooreports.web.spring.controller;
-
-import javax.servlet.http.HttpServletRequest;
+package org.jodreports.web.spring.controller;
 
 import freemarker.ext.servlet.HttpRequestParametersHashModel;
 
-/**
- * A predefined document generator that build the model from the passed HTTP parameters.
- */
+import javax.servlet.http.HttpServletRequest;
+
+/** A predefined document generator that build the model from the passed HTTP parameters. */
 public class HttpParametersDocumentGenerator extends AbstractDocumentGenerator {
 
-    protected Object getModel(HttpServletRequest request) throws Exception {
-        return new HttpRequestParametersHashModel(request);
-    }
+  protected Object getModel(HttpServletRequest request) throws Exception {
+    return new HttpRequestParametersHashModel(request);
+  }
 }
