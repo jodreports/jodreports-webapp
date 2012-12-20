@@ -13,7 +13,7 @@
 // Lesser General Public License for more details.
 // http://www.gnu.org/copyleft/lesser.html
 //
-package net.sf.jooreports.web.spring.controller;
+package org.jodreports.web.spring.controller;
 
 import java.io.StringReader;
 
@@ -24,18 +24,16 @@ import org.xml.sax.InputSource;
 
 import freemarker.ext.dom.NodeModel;
 
-/**
- * A predefined document generator that builds the model from XML data passed
- * in the HTTP parameter named "model".
- */
+/** A predefined document generator that builds the model from XML data passed in the HTTP parameter named "model". */
 public class XmlDocumentGenerator extends AbstractDocumentGenerator {
-    public static final String HTTP_PARAMETER_NAME = "model";
 
-    protected Object getModel(HttpServletRequest request) throws Exception {
-        String xmlData = request.getParameter(HTTP_PARAMETER_NAME);
-        if (xmlData == null) {
-            throw new ServletException("missing required parameter: "+ HTTP_PARAMETER_NAME);
-        }
-        return NodeModel.parse(new InputSource(new StringReader(xmlData)));
+  public static final String HTTP_PARAMETER_NAME = "model";
+
+  protected Object getModel(HttpServletRequest request) throws Exception {
+    String xmlData = request.getParameter(HTTP_PARAMETER_NAME);
+    if (xmlData == null) {
+      throw new ServletException("missing required parameter: " + HTTP_PARAMETER_NAME);
     }
+    return NodeModel.parse(new InputSource(new StringReader(xmlData)));
+  }
 }
