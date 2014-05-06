@@ -11,7 +11,7 @@
 
 
   <groupId>org.jodreports</groupId>
-  <artifactId>jodreports-webapp-sample</artifactId>
+  <artifactId>jodreports-webapp</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -75,4 +75,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <scm>
+    <url>https://github.com/jodreports</url>
+    <connection>scm:git:git@github.com:jodreports/jodreports-webapp.git</connection>
+    <developerConnection>scm:git:git@github.com:jodreports/jodreports-webapp.git</developerConnection>
+  </scm>
+
 </project>
