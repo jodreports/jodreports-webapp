@@ -5,18 +5,21 @@
   <parent>
     <groupId>org.jodreports.poms</groupId>
     <artifactId>jodreports-parent</artifactId>
-    <version>1-SNAPSHOT</version>
-    <relativePath>../jodreports-parent</relativePath>
+    <version>1</version>
   </parent>
-
 
   <groupId>org.jodreports</groupId>
   <artifactId>jodreports-webapp</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
-
+  
   <name>JODReports :: Sample Web Application</name>
-  <url>http://jodreports.sourceforge.net/</url>
+  <description>A sample web application demonstrating document generation with JODReports</description>
+  <url>http://www.jodreports.org/</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <developers>
     <developer>
@@ -29,18 +32,27 @@
       <name>Yongtai Liang</name>
       <email>terry@poloniouslive.com</email>
     </developer>
+    <developer>
+      <id>ansgarkonermann</id>
+      <name>Ansgar Konermann</name>
+      <email>ansgar.konermann@googlemail.com</email>
+    </developer>
+    <developer>
+      <id>jacobf</id>
+      <name>Jacob Fahrenkrug</name>
+      <email>jacob.fahrenkrug@googlemail.com</email>
+    </developer>
   </developers>
 
   <dependencies>
     <dependency>
       <groupId>org.jodreports</groupId>
       <artifactId>jodreports-library</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-jdk14</artifactId>
-      <version>1.6.1</version>
     </dependency>
     <dependency>
       <groupId>com.artofsolving</groupId>
@@ -68,13 +80,9 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <scm>
     <url>https://github.com/jodreports</url>

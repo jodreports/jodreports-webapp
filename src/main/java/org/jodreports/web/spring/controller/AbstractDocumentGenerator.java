@@ -15,26 +15,24 @@
 //
 package org.jodreports.web.spring.controller;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
+import com.artofsolving.jodconverter.DocumentConverter;
+import com.artofsolving.jodconverter.DocumentFormat;
+import com.artofsolving.jodconverter.DocumentFormatRegistry;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.jodreports.templates.DocumentTemplate;
+import org.jodreports.templates.DocumentTemplateException;
+import org.jodreports.templates.DocumentTemplateFactory;
+import org.springframework.core.io.Resource;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.artofsolving.jodconverter.DocumentConverter;
-import com.artofsolving.jodconverter.DocumentFormat;
-import com.artofsolving.jodconverter.DocumentFormatRegistry;
-import org.jodreports.templates.DocumentTemplate;
-import org.jodreports.templates.DocumentTemplateException;
-import org.jodreports.templates.DocumentTemplateFactory;
-
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.springframework.core.io.Resource;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Base class for predefined document generators.

@@ -15,8 +15,20 @@
 //
 package org.jodreports.web.samples;
 
-import java.awt.Color;
-import java.awt.GradientPaint;
+import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jodreports.templates.image.ImageSource;
+import org.jodreports.templates.image.RenderedImageSource;
+import org.jodreports.web.spring.controller.AbstractDocumentGenerator;
+
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
@@ -28,21 +40,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import javax.imageio.ImageIO;
-import javax.servlet.http.HttpServletRequest;
-
-import org.jodreports.templates.image.RenderedImageSource;
-import org.jodreports.templates.image.ImageSource;
-import org.jodreports.web.spring.controller.AbstractDocumentGenerator;
-
-import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.chart.renderer.category.BarRenderer;
-import org.jfree.data.category.DefaultCategoryDataset;
 
 public class SalesReportGenerator extends AbstractDocumentGenerator {
 

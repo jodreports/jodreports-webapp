@@ -15,9 +15,9 @@
 //
 package org.jodreports.web.spring.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import freemarker.ext.servlet.HttpRequestParametersHashModel;
+
+import javax.servlet.http.HttpServletRequest;
 
 /** A predefined document generator that build the model from the passed HTTP parameters. */
 public class HttpParametersDocumentGenerator extends AbstractDocumentGenerator {

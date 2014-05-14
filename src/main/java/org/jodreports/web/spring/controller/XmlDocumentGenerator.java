@@ -15,14 +15,12 @@
 //
 package org.jodreports.web.spring.controller;
 
-import java.io.StringReader;
+import freemarker.ext.dom.NodeModel;
+import org.xml.sax.InputSource;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-
-import org.xml.sax.InputSource;
-
-import freemarker.ext.dom.NodeModel;
+import java.io.StringReader;
 
 /** A predefined document generator that builds the model from XML data passed in the HTTP parameter named "model". */
 public class XmlDocumentGenerator extends AbstractDocumentGenerator {
